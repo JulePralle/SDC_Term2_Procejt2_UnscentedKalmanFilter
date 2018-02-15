@@ -1,7 +1,45 @@
-# Unscented Kalman Filter Project Starter Code
+# Unscented Kalman Filter 
 Self-Driving Car Engineer Nanodegree Program
+--
 
-In this project utilize an Unscented Kalman Filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project reburic. 
+[//]: # (Image References)
+
+[image1]: ./imageEKF.JPG "Example EKF"
+[image2]: ./imageUKF.JPG "Example UKF"
+
+## Introduction
+In this project an unscented Kalman filter was utilized to estimate the state of a moving object in the udacity simulator with noisy lidar and radar measurements for reaching a better accurancy and performance than an extended Kalman filter [(last project)](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter) is capable of. 
+
+
+## Extended (EKF) vs. Unscented Kalman Filter (UKF)
+* The Unscented Kalman filter is an alternative technique to deal with non-linear models
+* Instead of linearizing a non-linear function as the EKF does, the UKF uses sigma points to approximate the probability distribution
+* with this technique the UKF is capable of providing a more smooth position and velocity estimation of dynamic objects without introducing a delay
+
+The images below compare the estimation of an dynamic moving object with an EKF (left) and an UKF (right). Die estimation of the EKF underestimates the truth state and the estimation of the UKF follows the ground truth much better.
+
+![alt text][image1] ![alt text][image2]
+
+
+## Files and code
+#### [/src/main.cpp:](https://github.com/JulePralle/SDC_Term2_Project2_UnscentedKalmanFilter/blob/master/src/main.cpp)
+* reads in the data
+* calls a function to run the Unscented Kalman filter
+* calls a function to calculate the RMSE
+ 
+#### [/src/ukf.cpp:](https://github.com/JulePralle/SDC_Term2_Project2_UnscentedKalmanFilter/blob/master/src/ukf.cpp)
+* initializes the Unscented Kalman filter
+* calls the predict function
+* calls the update function
+* defines the predict and update functions
+
+#### [/src/tools.cpp:](https://github.com/JulePralle/SDC_Term2_Project2_UnscentedKalmanFilter/blob/master/src/tools.cpp)
+* function to calculate the RMSE 
+
+
+# Udacity Part
+---
+## Project Starter Code
 
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
 
