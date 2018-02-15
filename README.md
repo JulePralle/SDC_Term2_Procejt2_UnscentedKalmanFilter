@@ -4,8 +4,8 @@ Self-Driving Car Engineer Nanodegree Program
 
 [//]: # (Image References)
 
-[image1]: ./imageEKF.JPG "Example EKF"
-[image2]: ./imageUKF.JPG "Example UKF"
+[image1]: ./EKFvsUKF.png "Example EKF vs UKF"
+
 
 ## Introduction
 In this project an unscented Kalman filter was utilized to estimate the state of a moving object in the udacity simulator with noisy lidar and radar measurements for reaching a better accurancy and performance than an extended Kalman filter [(last project)](https://github.com/JulePralle/SDC_Term2_Project1_ExtendedKalmanFilter) is capable of. 
@@ -18,7 +18,7 @@ In this project an unscented Kalman filter was utilized to estimate the state of
 
 The images below compare the estimation of an dynamic moving object with an EKF (left) and an UKF (right). Die estimation of the EKF underestimates the truth state and the estimation of the UKF follows the ground truth much better.
 
-![alt text][image1] ![alt text][image2]
+![alt text][image1]
 
 
 ## Files and code
